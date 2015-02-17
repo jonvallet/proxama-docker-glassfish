@@ -1,7 +1,7 @@
-tutum-docker-glassfish
+proxama-docker-glassfish
 =====================
 
-Base docker image to run a Glassfish 4.0 application server
+Base docker image to run a Glassfish 4.1 application server
 
 
 Usage
