@@ -11,7 +11,6 @@ RUN apt-get update && \
 
 ENV PATH /opt/glassfish4/bin:$PATH
 
-ADD run.sh /run.sh
 ADD change_admin_password.sh /change_admin_password.sh
 ADD change_admin_password_func.sh /change_admin_password_func.sh
 ADD enable_secure_admin.sh /enable_secure_admin.sh
@@ -20,4 +19,4 @@ RUN chmod +x /*.sh
 # 4848 (administration), 8080 (HTTP listener), 8181 (HTTPS listener)
 EXPOSE 4848 8080 8181
 
-CMD ["/run.sh"]
+CMD ["asadmin", "start-domain", "-w"]
